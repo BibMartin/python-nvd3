@@ -465,6 +465,15 @@ class NVD3Chart(object):
         self.axislist[name] = axis
 
 
+    def _repr_html_(self):
+        self.buildhtml()
+        return ('<iframe src="{html}" width="{width}px" height="{height}px"></iframe>'\
+            .format(\
+                    html = "data:text/html;base64,"+self.htmlcontent.encode('utf8').encode('base64'),
+                    width = int(int(self.width)*1.1),
+                    height= int(int(self.height)*1.1),
+                   ))
+
 class TemplateMixin(object):
     """
     A mixin that override buildcontent. Instead of building the complex

@@ -26,4 +26,4 @@ from .cumulativeLineChart import cumulativeLineChart
 from .scatterChart import scatterChart
 from .discreteBarChart import discreteBarChart
 from .multiBarChart import multiBarChart
-from . import ipynb
+#from . import ipynb
